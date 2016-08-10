@@ -10,10 +10,13 @@ function startup() {
     var cta = document.getElementById("buy-now");
     var replay = document.getElementById("replay");
 
-  	$(img2).hide();
+  	// Reset texture width upon replay
+    $(texture).animate({"width":"100%"});
+    
+    $(img2).hide();
   	$(texture).hide();
-  	$(text1).hide();
-  	$(text2).hide();
+    $(text1).hide();
+    $(text2).hide();
   	$(text3).hide();
   	$(product).hide();
   	$(cta).hide();
@@ -26,15 +29,13 @@ function startup() {
 
   	
   	setTimeout(function(){
-  		$(text1).show("slide",{direction:"down"},500);
-  		console.log(text1);
-  	},3000);  	
+      $(text1).show("slide",{direction:"down"},500);
+    },3000);  	
 
 
   	setTimeout(function(){
   		$(text1).hide();
   		$(texture).show("slide",{direction:"left"},500);
-  		console.log(text1);
   	},5000);
 
   	
@@ -45,11 +46,13 @@ function startup() {
   	
   	setTimeout(function(){
   	 	$(text2).hide();
-  	 },8000);
+      $(texture).animate({
+        "width":"200%",
+      },1000);
+     },8000);
 
-  	
-  	setTimeout(function(){
-  	 	// !!MISSING!! add code here to completely slide the texture
+
+    setTimeout(function(){
   	 	$(text3).show();
   	 	$(product).show("slide",{direction:"up"},500);
   	 	$(cta).show();

@@ -11,6 +11,8 @@
 	float: left;
 	background: #ccc;
 	font-family: "Redgar";
+	position: absolute;
+	overflow: hidden;
 }
 
 .img{
@@ -18,8 +20,7 @@
 }
 
 #img-texture{
-	max-width: 300px;
-	overflow-x: hidden;
+	width: 100%;
 	direction: rtl;
 }
 
@@ -41,7 +42,7 @@
 	position: absolute;
 	z-index: 997;
 	color: #fff;
-	top:150px;
+	top:130px;
 	left: 60px;
 }
 
